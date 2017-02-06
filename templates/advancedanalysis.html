@@ -1,0 +1,34 @@
+{% extends "start.html" %}
+
+{% block body %}
+		<h2>Advanced Analysis:</h2>
+        <table>
+        <th>Word</th>
+		<th></th>
+		<th>Rank</th>
+		<th>F*A</th>
+        	{% for word, rank, trace in items %}
+        		<tr>
+        			<td>{{ word }}</td></td><td>---></td>
+					<td>{{ rank }}</td>
+					<td>{{ trace }}</td>
+        		</tr>
+       		{% endfor %}
+		</table>
+		<br>
+		{% if choice == 0 %}
+			* The 1st most popular association was used to calculate the rank<br>
+		{% elif choice == 1 %}
+			* The 2nd most popular association was used to calculate the rank<br>
+		{% else %}
+			* The 3rd most popular association was used to calculate the rank<br>
+		{% endif %}
+		* F*A stands for frequency multiplied by the chosen association score
+		<br>
+		<br>
+		<form class="form-style" action='/pastanalyses' id="past_analyses" method='POST'>
+    		<input type="submit" value="Previous Analyses" />
+		</form>		
+{% endblock %}
+
+

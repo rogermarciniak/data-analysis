@@ -1,0 +1,24 @@
+{% extends "start.html" %}
+
+{% block body %}
+		<h2>Analysis:</h2>
+		<h3> {{ docs[0]['file'] }} </h3>
+		<table>
+		<th>Token</th>
+		<th></th>
+		<th>Rank</th>
+        	{% for doc in docs %}
+        		<tr>
+					<td>{{ doc['token'] }}</td><td>---></td>
+					<td>{{ doc['rank'] }}</td>
+        		</tr>
+       		{% endfor %}
+		</table>
+		<br><br>
+		<form class="form-style" action='/' method='POST'>
+			<button formaction="/pastanalyses">View Another</button>
+			<input type="submit" value="Upload New Analysis" />
+		</form>		
+{% endblock %}
+
+

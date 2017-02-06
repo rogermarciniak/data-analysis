@@ -1,0 +1,23 @@
+{% extends "start.html" %}
+
+{% block body %}
+		<h2>Previous Analyses:</h2>
+			<form class="form-style" action='/pastanalysis' id="choice" method='POST'>
+			<table>
+			<th>File</th>
+			<th>Hash</th>        	
+			{% for doc in docs %}
+			<tr>
+        		<td><input type="radio" name="filehash" value="{{ doc['filehash'] }}"> {{ doc['file'] }} </td>
+				<td> {{ doc['filehash'] }} </td>			
+			</tr>       		
+			{% endfor %}
+			</table>
+			<br>
+				<button formaction="/">Upload New Analysis</button>
+				<input type="submit" value="View Analysis" />
+			</form>
+		<br><br>	
+{% endblock %}
+
+	

@@ -1,0 +1,8 @@
+import json
+
+with open('pup.json', 'rw') as normsf:
+	norms = json.load(normsf)
+	for key in norms.keys():
+		if '.' in key:
+			key.replace('.', '')
+	json.dump(norms, normsf)

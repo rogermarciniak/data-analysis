@@ -1,0 +1,26 @@
+<html>
+    <head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+        <title>Data Analysis Project</title>
+    </head>
+	{% with messages = get_flashed_messages() %}
+  		{% if messages %}
+    		<ul class=flashes>
+    		{% for message in messages %}
+      			<li>
+					<font color="red">
+						{{ message }}
+					</font>
+				</li>
+    		{% endfor %}
+    		</ul>
+  		{% endif %}
+	{% endwith %}
+    <body>
+		<center><h2>Data Analysis Project</h2>			
+        {% block body %}
+   	    {% endblock %}
+   		Copyright 2017 (c) IT Carlow.<br>
+		created by Roger Marciniak</center>
+    </body>
+</html>

@@ -1,0 +1,144 @@
+<style type="text/css">
+
+html {background-color: black}
+
+body {
+    background-color: #495C60;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #fff;
+
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 22px;
+    color: #fff;
+}
+
+h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+h4 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.form-style{
+    width: 300px;
+    font-size: 16px;
+    background: #495C70;
+    padding: 30px 30px 15px 30px;
+    border: 5px solid #53687E;
+}
+.form-style input[type=submit],
+.form-style input[type=button],
+.form-style input[type=text],
+.form-style input[type=email],
+.form-style textarea,
+.form-style label
+{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #fff;
+
+}
+.form-style label {
+    display:block;
+    margin-bottom: 10px;
+}
+.form-style label > span{
+    display: inline-block;
+    float: center;
+    
+}
+.form-style input[type=text],
+.form-style input[type=email] 
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 150px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: italic;
+}
+.form-style textarea{
+    font-style: italic;
+    padding: 0px 0px 0px 0px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 100px;
+    overflow: hidden;
+    resize:none;
+    height:20px;
+}
+
+.form-style textarea:focus, 
+.form-style input[type=text]:focus,
+.form-style input[type=email]:focus,
+.form-style input[type=email] :focus
+{
+    border-bottom: 1px dashed #D9FFA9;
+}
+
+.form-style input[type=submit],
+.form-style input[type=button]{
+    background: #576E86;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+.form-style input[type=submit]:hover,
+.form-style input[type=button]:hover{
+	background: #394D61;
+}
+
+table {
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 400px;
+border-collapse:
+collapse; border-spacing: 0;
+}
+
+td, th {
+border: 1px solid transparent; /* No more visible border */
+height: 30px;
+transition: all 0.3s; /* Simple transition for hover effect */
+}
+
+th {
+background: #DFDFDF; /* Darken header a bit */
+font-weight: bold;
+}
+
+td {
+background: #FAFAFA;
+text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+tr:nth-child(even) td { background: #F1F1F1; }
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells) */
+tr:nth-child(odd) td { background: #FEFEFE; }
+
+tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */
+
+
+
+</style>

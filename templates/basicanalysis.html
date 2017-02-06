@@ -1,0 +1,46 @@
+{% extends "start.html" %}
+
+{% block body %}
+		<h2>Basic Analysis:</h2>
+        <table>
+		<th>Word</th>
+		<th></th>
+		<th>Top Association</th>
+        <th>2nd Association</th>
+		<th>3rd Association</th>
+        	{% for word, freq, asso in wrds %}
+        		<tr>
+        			<td>({{ freq }}) {{ word }}</td><td>---></td>
+					<td>({{ list(asso[0].values())[0] }}) {{ list(asso[0].keys())[0] }}</td>
+					<td>({{ list(asso[1].values())[0] }}) {{ list(asso[1].keys())[0] }}</td>
+					<td>({{ list(asso[2].values())[0] }}) {{ list(asso[2].keys())[0] }}</td>
+        		</tr>
+       		{% endfor %}
+		</table>
+		<br>
+		<br>
+		Words below were not found in the associations file:<br>
+		<table>
+			{% for word, freq in wrdsNF %}
+        		<tr>
+        			<td>({{ freq }}) {{ word }}</td>
+        		</tr>
+       		{% endfor %}
+		</table>
+		<br>
+		<br>
+		Choose setting for advanced analysis:<br>
+		<br>		
+		<form class="form-style" action='/advanced' id="user_setting" method='POST'>
+			<select name="choice" form="user_setting">
+  				<option value="0">1st Association</option>
+  				<option value="1">2nd Association</option>
+  				<option value="2">3rd Association</option>
+			</select>
+			<br> 
+			<br>		
+			<input type="submit" value="Advanced Analysis" />
+		</form>		
+{% endblock %}
+
+<input type="text" name="name" required><br><br>
